@@ -1,0 +1,17 @@
+---
+layout:     post
+title:      "点点滴滴"
+subtitle:   " \"生活平平淡淡,记录每一天\""
+date:       2017-01-10
+author:     "yubinWong"
+header-img: "img/head-bg/Bit-by-bit-2017.jpg"
+tags:
+    - 生活
+---
+
+> “Yeah It's on. ”
+
+
+## 前言
+
+yubinWong 的 Blog 就这么开通了。

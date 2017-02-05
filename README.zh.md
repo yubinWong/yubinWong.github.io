@@ -1,10 +1,10 @@
-# Hux blog 模板
+# yubinWong blog 模板
 
-### [我的博客在这里](http://huxpro.github.io)
+### [我的博客在这里](http://yubinWong.github.io)
 
 ### [模板在这里](http://huangxuan.me/huxblog-boilerplate/)
 
-我的博客仓库——`huxpro.github.io`，是经常修改的，而且还会有人乱提交代码，因此给大家做了一个稳定版的模板。大家可以直接fork模板——`huxblog-boilerplate`,要改的地方我都说明了。或者可以直接下载zip到本地自己去修改。
+我的博客仓库——`yubinWong.github.io`，是经常修改的，而且还会有人乱提交代码，因此给大家做了一个稳定版的模板。大家可以直接fork模板——`huxblog-boilerplate`,要改的地方我都说明了。或者可以直接下载zip到本地自己去修改。
 
 ## 各版本特性
 
@@ -196,8 +196,8 @@ disqus_username: _你的用户名_
 ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: 'UA-89979064-1'            # Format: UA-xxxxxx-xx
+ga_domain: yubinwong.github.io
 ```
 
 #### Customization
@@ -219,7 +219,7 @@ There are a number of tasks it performs like minification of the JavaScript, com
 
 #### SEO Title
 
-我的博客标题是 **“Hux Blog”** 但是我想要在搜索的时候显示 **“黄玄的博客 | Hux Blog”** ，这个就需要SEO Title来定义了。
+我的博客标题是 **“yubinWong Blog”** 但是我想要在搜索的时候显示 **“黄玄的博客 | Hux Blog”** ，这个就需要SEO Title来定义了。
 
 其实这个SEO Title就是定义了<head><title>标题</title></head>这个里面的东西和多说分享的标题，你可以自行修改的。
 
