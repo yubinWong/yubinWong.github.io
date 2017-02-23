@@ -1,0 +1,176 @@
+---
+layout:     post
+title:      "git使用总结"
+subtitle:   " \"常规用法\""
+date:       2017-02-15
+author:     "yubinWong"
+header-img: "img/head-bg/Bit-by-bit-2017.jpg"
+tags:
+    - 工具
+---
+
+>git 常规使用方法
+
+## git 创建版本库
+1. 进入想要创建版本库目录
+2. 执行命令  
+`git init`   
+3. 创建成功，.git 会自动生成，切勿自己手动删除或修改.git目录，否则有可能导致git版本控制出错
+4. 提交到远程仓库  
+`git remote add origin 远程仓库地址`  
+`git push -u origin master`
+
+## git 本地配置
+
+```java
+//设置git 用户名
+git config --global user.name <username>
+//设置git email
+git config --global user.email <email>
+//查看已设配置
+git config --list
+//设置颜色区分
+git config --global color.ui true
+```
+
+## git 常用场景
+
+### 添加文件到版本库
+
+```java
+//添加某个文件
+git add filename
+//添加所有java文件
+git add *.java
+//添加所有改动,文件的变更及创建  
+git add .  
+//修改和删除操作,不添加新建文件  
+git add -u 
+//添加所有文件
+git add -A 
+```
+
+### 提交
+
+```java
+//提交当前更改信息到版本库(前提是已经执行add命令) 或者直接执行 `git commit -a -m ""` 直接把内容添加并提交到版本库
+git commit -m "注释" 
+//修改提交备注
+git commit --amend
+//提交本地分支到远程分支
+git push origin 本地分支名:远程分支名
+```
+
+### 查看状态
+
+```java
+//查看当前更新内容
+git status
+//查看版本记录(f或b翻页,j或k上下换行,/搜索<n下一个 N上一个>)
+git log
+//gitk图形界面
+gitk
+//查看所有分支最后提交
+git branch -v
+```
+
+### 操作当前状态
+
+```java
+//保存当前工作状态
+git stash
+//恢复到某个状态,但不删除stash
+git stash apply
+//恢复到某个状态,并且删除stash
+git stash pop
+//查看所有状态
+git stash list
+```
+
+### 分支管理
+
+```java
+//查看本地分支
+git branch
+//查看远程分支
+git branch -r
+//查看所有分支
+git branch -a
+//创建某分支
+git branch <branchName>
+//切换到某分支
+git checkout <branchName>
+//切换到指定分支,没有就创建
+git checkout -b <branchName>
+//合并分支并提交,如果冲突,可以git checkout head . 撤销 (合并不提交在后面加--no-commit)
+git merge <branchName>
+//压合合并(在一个分支上面提交过很多次,把这些提交合并成一次合并到另外一个分支)
+git merge --squash <branchName>
+//删除分支,假如没有合并,会删除失败
+git branch -d <branchName>
+//强制删除分支,即使没有合并也会被删除
+git branch -D <branchName>
+//删除远程分支
+git branch -r -d origin/<branchName>
+git push origin :<branchName>
+//重命名分支
+git branch -M <oldBranchName> <newBranchName>
+```
+
+
+
+### 标签管理(用于版本记录或者里程碑)
+>标签用法和分支用法类似,只是把branch换成tag即可使用,下面介绍些特殊用法
+
+```java
+//为某个分支创建标签
+git tag <tagName> <branchName>
+//为某次提交创建标签
+git tag <tagName> <commitId>
+//删除远程标签
+git tag -d <tagName>
+git push origin :refs/tags/<tagName>
+```
+
+### 撤销修改
+
+```java
+//撤销指定文件
+git checkout head <filename>
+//撤销尚未提交的修改
+git checkout head .
+//撤销到上个版本,HEAD代表当前版本,HEAD^是上个版本
+git reset --head HEAD^
+//查看版本提交记录
+git reflog
+//撤销到指定版本
+git reset --head <number>
+//撤销当前版本的提交
+git revert HEAD
+```
+
+### REMOTE 管理
+
+```java
+//克隆版本库
+git clone <远程url>
+//添加远程版本库的别名
+git remote add <别名> <远程url>
+//删除别名
+git remote rm <别名>
+//重远程版本库更新到本地
+git fetch <别名>
+//合并远程版本代码到本地
+git pull 或 git pull origin <远程分支名>
+//提交到远程版本库
+git push origin master
+```
+
+### 导出版本库
+>更多信息可git help archive 查询具体命令
+
+```java
+//将代码导出并 zip 打包后放在当前目录下，`output.zip`就是需要的文件，`-0`的意思是不压缩
+git archive --format zip --output "./output.zip" master -0 
+```
+
