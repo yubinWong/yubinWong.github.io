@@ -4,7 +4,7 @@ title:      "git使用总结"
 subtitle:   " \"常规用法\""
 date:       2017-02-15
 author:     "yubinWong"
-header-img: "img/head-bg/Bit-by-bit-2017.jpg"
+header-img: "img/head-bg/git-apply-2017.png"
 catalog:    true
 tags:
     - 工具
