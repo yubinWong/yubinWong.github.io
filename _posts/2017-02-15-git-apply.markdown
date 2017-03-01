@@ -8,6 +8,7 @@ header-img: "img/head-bg/git-apply-2017.png"
 catalog:    true
 tags:
     - 工具
+    - git
 ---
 
 >git 常规使用方法
