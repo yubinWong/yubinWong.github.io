@@ -146,7 +146,7 @@ git reset --head HEAD^
 //查看版本提交记录
 git reflog
 //撤销到指定版本
-git reset --head <number>
+git reset --hard <number>
 //撤销当前版本的提交
 git revert HEAD
 ```
