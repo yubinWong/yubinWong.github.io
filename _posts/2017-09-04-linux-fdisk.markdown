@@ -4,7 +4,7 @@ title:      "fdisk分区"
 subtitle:   " \"正确分区方法\""
 date:       2017-02-15
 author:     "yubinWong"
-header-img: "img/head-bg/git-apply-2017.png"
+header-img: "img/head-bg/git-linux.jpg"
 catalog:    true
 tags:
     - Linux
