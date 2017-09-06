@@ -2,7 +2,7 @@
 layout:     post
 title:      "fdisk分区"
 subtitle:   " \"正确分区方法\""
-date:       2017-02-15
+date:       2017-09-04
 author:     "yubinWong"
 header-img: "img/head-bg/git-linux.jpg"
 catalog:    true
