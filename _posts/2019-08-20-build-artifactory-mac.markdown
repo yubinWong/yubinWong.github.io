@@ -2,7 +2,7 @@
 layout:     post
 title:      "mac搭建本地化仓库artifactory"
 subtitle:   " \"Gradle、Maven 本地化仓库Artifactory\""
-date:       2019-08-24
+date:       2019-08-20
 author:     "yubinWong"
 header-img: "img/head-bg/artifactory-head.png"
 catalog:    true
